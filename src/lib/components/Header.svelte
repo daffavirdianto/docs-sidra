@@ -1,8 +1,6 @@
 <script>
     import Bar from "$lib/assets/svg/menu.svg";
     let isMenuOpen = false;
-
-    
 </script>
 
 <header class="fixed z-10 w-full bg-white">
@@ -14,13 +12,11 @@
                 &#9776;
             {/if}
         </button>
-        
-        <div class="text-xl font-semibold">
-            <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="/logo.png" class="h-8" alt="Sidra Logo" />
-                <span class="self-center whitespace-nowrap">Sidra | Docs</span>
-            </a>
-        </div>
+
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+			<img src="/logo.png" class="h-8" alt="Sidra Logo" />
+			<span class="self-center whitespace-nowrap text-2xl font-semibold">Sidra | Docs</span>
+		</a>
 
         <div class="flex">
             <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
@@ -40,10 +36,19 @@
             </div>
         </div>
 
-        <nav class="hidden space-x-6 md:flex">
-            <a href="/" class="hover:text-gray-200">Documentation</a>
-            <a href="/contact" class="hover:text-gray-200">Contact</a>
-        </nav>
+        <div class="md:flex items-center justify-center space-x-10">
+            <nav class="hidden space-x-6 md:flex">
+                <a href="/" class="block rounded bg-blue-700 px-3 py-2 text-white md:bg-transparent md:p-0 md:text-blue-700 md:dark:text-blue-500">
+                    Documentation
+                </a>
+                <a href="/Contact" class="block rounded px-3 py-2 text-gray-900 hover:bg-gray-100 md:p-0 md:hover:bg-transparent md:hover:text-blue-700 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:dark:hover:text-blue-500">
+                    Contact
+                </a>
+            </nav>
+            <a href="/portal/admin" class="inline-flex px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
+                Get started
+            </a>
+        </div>
     </div>
 
     <div class={`md:hidden h-screen bg-gray-50 p-4 space-y-4 overflow-y-auto transition-transform duration-300 ${isMenuOpen ? 'transform translate-x-0' : 'transform -translate-x-full'}`}>
